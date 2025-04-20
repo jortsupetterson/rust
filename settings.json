@@ -1,0 +1,11 @@
+{
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [],
+    "vim.normalModeKeyBindingsNonRecursive":[
+    {
+        "before": ["<leader>","W"],
+        "commands": ["workbench.acrion.files.save"]
+    }
+]
+}
