@@ -1,23 +1,29 @@
 fn main () {
-    //Tulostaa '31 days' (Aalto sulkeet täydenetään pilkun jälkeisellä muuttujalla)
+    // Tulostaa: '31 days'
     println!("{} days", 31);
 
+    // Tulostaa: 'Alice, this is Bob. Bob, this is Alice'
     println!("{0}, this is {1}. {1}, this is {0}", "Alice", "Bob");
-    //Tulostaa Alice tämä on Bob. Bob tämä on Alice
-    // Printissä ensimmäinen argumentti tulostetaan. Seuraavat argumentit ovat Array \n
-    //Lista josta voidaan jotka voidaan indexejä hyödyntämällä sijoitaa aaltosulkeisiin.
 
-//Erinomainen tapa näyttää kuinka muuttujia sa käytettyä merkkijonossa
+    // Tulostaa: 'the quick brown fox jumps over the lazy dog'
     println!("{subject} {verb} {object}",
-            object="the lazy dog",
-            subject="the quick brown fox",
-            verb="jumps over");
+        object = "the lazy dog",
+        subject = "the quick brown fox",
+        verb = "jumps over"
+    );
 
-            //Oma testi, toimii hyvin myös makron ulkopuolisille muuttujille
-let verb: &'static str = "jumps over";
+    // Tulostaa saman mutta osa arvoista muuttujina
+    let verb: &'static str = "jumps over";
     println!("{subject} {verb} {object}",
-            object="the lazy dog",
-            subject="the quick brown fox");
-        }
-    
-    
+        object = "the lazy dog",
+        subject = "the quick brown fox"
+    );
+
+    // Täyttö vasemmalta nollilla → "00001"
+    println!("{number:0>5}", number = 1);
+
+    // Täyttö oikealta nollilla → "10000"
+    println!("{number:0<5}", number = 1);
+}
+
+
