@@ -12,18 +12,24 @@ fn main () {
         verb = "jumps over"
     );
 
-    // Tulostaa saman mutta osa arvoista muuttujina
+    //Testi toimiiko myös ulkopuolisilla muuttujilla: toimii!
     let verb: &'static str = "jumps over";
     println!("{subject} {verb} {object}",
         object = "the lazy dog",
         subject = "the quick brown fox"
     );
 
-    // Täyttö vasemmalta nollilla → "00001"
+    // Täyttö vasemmalta nollilla "00001"
     println!("{number:0>5}", number = 1);
 
-    // Täyttö oikealta nollilla → "10000"
+    // Täyttö oikealta nollilla "10000"
     println!("{number:0<5}", number = 1);
+
+
+    println!("{number:0>width$}", number=1, width=5);
+
+//Tässä vaan testattiin miten debuger toimii jos makrolta puuttuu argumentteja
+    print!("My name is {0}, {1} {0}", "Bond", "James");
 }
 
 
